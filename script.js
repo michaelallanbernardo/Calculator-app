@@ -2,6 +2,8 @@ const display = document.getElementById("display");
 const buttons = document.querySelectorAll(".buttons button");
 const historyList = document.getElementById("historyList");
 const clearHistoryBtn = document.getElementById("clearHistoryBtn");
+const toggleHistoryBtn = document.getElementById("toggleHistoryBtn");
+const historyContent = document.querySelector(".history-content");
 
 // Load history from localStorage
 function loadHistory() {
@@ -234,6 +236,12 @@ clearHistoryBtn.addEventListener("click", () => {
     historyList.innerHTML = "";
     localStorage.removeItem("calcHistory");
     playClickSound();
+});
+
+// Toggle history panel
+toggleHistoryBtn.addEventListener("click", () => {
+    historyContent.classList.toggle("collapsed");
+    toggleHistoryBtn.classList.toggle("collapsed");
 });
 
 // Load saved history on page load

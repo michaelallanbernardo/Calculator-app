@@ -26,7 +26,6 @@
     <div class="header">
         <div>
             <h1>Calculator</h1>
-            <p class="subtitle">Do math in style!</p>
         </div>
     </div>
 
@@ -66,9 +65,14 @@
     </div>
 
     <div class="history-panel">
-        <h3>🎬 History</h3>
-        <ul id="historyList"></ul>
-        <button id="clearHistoryBtn" class="clear-history-btn">Clear History</button>
+        <div class="history-header">
+            <h3>History</h3>
+            <button id="toggleHistoryBtn" class="toggle-history-btn collapsed">▼</button>
+        </div>
+        <div class="history-content collapsed">
+            <ul id="historyList"></ul>
+            <button id="clearHistoryBtn" class="clear-history-btn">Clear History</button>
+        </div>
     </div>
 </div>
 
