@@ -3,53 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Calculator</title>
+    <title>✨ Fun Calculator ✨</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="animated-bg"></div>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+<div class="floating-shapes">
+    <div class="shape shape-1">🚀</div>
+    <div class="shape shape-2">🎨</div>
+    <div class="shape shape-3">🎭</div>
+    <div class="shape shape-4">⚡</div>
+    <div class="shape shape-5">🎪</div>
+    <div class="shape shape-6">🌟</div>
+    <div class="shape shape-7">💥</div>
+</div>
+
 <div class="container">
-
-    <div class="top-bar">
-        <h2>Calculator</h2>
-        <button id="themeBtn">🌙</button>
-    </div>
-
-    <div class="calculator">
-
-        <input type="text" id="display" readonly>
-
-        <div class="buttons">
-            <button>C</button>
-            <button>⌫</button>
-            <button>/</button>
-            <button>*</button>
-
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>-</button>
-
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>+</button>
-
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>=</button>
-
-            <button class="zero">0</button>
-            <button>.</button>
+    <div class="header">
+        <div>
+            <h1>Calculator</h1>
+            <p class="subtitle">Do math in style!</p>
         </div>
     </div>
 
-    <div class="history">
-        <h3>History</h3>
-        <ul id="historyList"></ul>
+    <div class="calculator">
+        <input type="text" id="display" readonly placeholder="0">
+        <div class="display-glow"></div>
+
+        <div class="buttons">
+            <button class="btn-clear" data-action="clear">Clear</button>
+            <button class="btn-delete" data-action="delete">⌫ Del</button>
+            <button class="btn-operator" data-action="operator">/</button>
+            <button class="btn-operator" data-action="operator">×</button>
+
+            <button class="btn-number">7</button>
+            <button class="btn-number">8</button>
+            <button class="btn-number">9</button>
+            <button class="btn-operator" data-action="operator">−</button>
+
+            <button class="btn-number">4</button>
+            <button class="btn-number">5</button>
+            <button class="btn-number">6</button>
+            <button class="btn-operator" data-action="operator">+</button>
+
+            <button class="btn-number">1</button>
+            <button class="btn-number">2</button>
+            <button class="btn-number">3</button>
+            <button class="btn-equals" data-action="equals">=</button>
+
+            <button class="btn-number zero">0</button>
+            <button class="btn-number">.</button>
+            
+            <button class="btn-advanced" data-action="sqrt">√</button>
+            <button class="btn-advanced" data-action="percent">%</button>
+            <button class="btn-advanced" data-action="power">^</button>
+            <button class="btn-advanced" data-action="reciprocal">1/x</button>
+        </div>
     </div>
 
+    <div class="history-panel">
+        <h3>🎬 History</h3>
+        <ul id="historyList"></ul>
+        <button id="clearHistoryBtn" class="clear-history-btn">Clear History</button>
+    </div>
 </div>
 
 <script src="script.js"></script>
